@@ -8,7 +8,12 @@ class HerosController < ApplicationController
   def show
     json_response(@hero)
   end
-  
+
+  def fetching_heros
+    Heros::fetching_heros_service.new.execute
+  end
+
+  private
   def set_hero
     @hero = Hero.find(params[:id])
   end

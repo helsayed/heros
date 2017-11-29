@@ -16,14 +16,8 @@
 # require database cleaner at the top level
 require 'factory_girl_rails'
 
-# Shoulda::Matchers.configure do |config|
-#   config.integrate do |with|
-#     with.test_framework :rspec
-#     with.library :rails
-#   end
-# end
-
 RSpec.configure do |config|
+
   # add `FactoryGirl` methods
   config.include FactoryGirl::Syntax::Methods
   # rspec-expectations config goes here. You can use an alternate

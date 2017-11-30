@@ -4,4 +4,5 @@ class Hero < ApplicationRecord
 
   # association
   has_many :abilities
+  accepts_nested_attributes_for :abilities
 end

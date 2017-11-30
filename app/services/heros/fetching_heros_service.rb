@@ -9,9 +9,9 @@ module Heros
 
     def execute
       response = RestClient.get(fetch_url)
-      heros = JSON.parse(response.body['data'])
+      heros = JSON.parse(response.body)['data']
       heros.each do |hero_raw|
-        Heros::CreateHeroService(hero_raw: hero_raw).new.execute
+        Heros::CreateHeroService.new(hero_raw: hero_raw).execute
       end
     end
 
